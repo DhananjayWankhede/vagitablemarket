@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+      :root {
+            --primary: #000000;
+            --secondary: #234c61;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+        }
+            nav {
+            display:flex;
+            align-items:center;
+           
+            
+        }
+        .nav-links {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1400px;
+            margin: 0 auto;
+            gap: 2.7rem;
+            align-items:center;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+        }
+
+        .nav-links a:hover {
+            background: rgb(202, 14, 14);
+            transform: translateY(-2px);
+        }
+
+         .logo {
+        text-decoration: none;
+        display: flex;
+        align-items:left;
+        gap: 10px;
+        
+        }
+        .logo-img {
+        margin-left: 110px;
+        
+        height: 60px; 
+        width: 110px;;
+        transition: transform 0.3s ease;
+        }
+
+       
+        .logo-img:hover {
+         transform: scale(1.08);
+         }
+        .vegetable-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            padding: 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    /* About Section Styles */
+    .about-section {
+        padding: 4rem 1rem;
+        /* background: #f8faf8; */
+    }
+
+    .about-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
+    }
+
+    .about-text h2 {
+        color: #2ecc71;
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .mission-statement, .farm-story {
+        margin-bottom: 2.5rem;
+        padding: 1.5rem;
+        background: rgb(115, 113, 113);
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .values-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .value-card {
+        text-align: center;
+        padding: 1.5rem;
+        background:rgb(115, 113, 113);;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+    }
+
+    .value-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .value-card i {
+        font-size: 2rem;
+        color: #2ecc71;
+        margin-bottom: 1rem;
+    }
+
+    .about-image img {
+        width: 100%;
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    @media (max-width: 768px) {
+        .about-content {
+            grid-template-columns: 1fr;
+        }
+        
+        .about-image {
+            order: -1;
+        }
+    }
+</style>
+</head>
+<body>
+     <header>
+            <nav>
+                <a href="HomePage.html" class="logo">
+                    <img src="./img/FARMLOGO.png" alt="Wankhede Farms" class="logo-img">
+                <div class="nav-links">
+                    <a href="Home.html">Home</a>
+                    <a href="location.html">location</a>
+                    <a href="About.html">About</a>
+                    <a href="Contact.html">Contact</a>
+                    <a href="#cart"><i class="fas fa-shopping-cart"></i></a>
+                    <a href="#login" class="btn btn-primary">Login</a>
+                </div>
+            </nav>
+        </header>
+    <section class="about-section">
+        <div class="about-content">
+            <div class="about-text">
+                
+                <h2>About Our Organic Journey</h2>
+                <div class="mission-statement">
+                    <h3>🌱 Our Mission</h3>
+                    <p>To deliver fresh, chemical-free produce while supporting sustainable agriculture and empowering local farming communities.</p>
+                </div>
+                
+                <div class="farm-story">
+                    <h3>📖 Our Story</h3>
+                    <p>Established in 2020, we began as a small family farm passionate about preserving traditional farming methods. Today, we partner with 50+ local organic farmers across Maharashtra to bring you nature's finest harvest.</p>
+                </div>
+    
+                <div class="values-grid">
+                    <div class="value-card">
+                        <i class="fas fa-seedling"></i>
+                        <h4>100% Organic</h4>
+                        <p>Certified by India Organic (NPOP)</p>
+                    </div>
+                    <div class="value-card">
+                        <i class="fas fa-truck"></i>
+                        <h4>Farm to Table</h4>
+                        <p>Harvested & delivered within 24 hours</p>
+                    </div>
+                    <div class="value-card">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        <h4>Farmer First</h4>
+                        <p>40% higher returns for our farmers</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="about-image">
+                <img src="./img/group.jpg" alt="Our Farming Team">
+            </div>
+        </div>
+    </section>
+</body>
+</html>

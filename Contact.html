@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Our Farmers | GreenHarvest</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+         :root {
+            --primary: #000000;
+            --secondary: #234c61;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+        }
+        nav {
+            display:flex;
+            align-items:center;
+           ;
+            
+        }
+        .nav-links {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1400px;
+            margin: 0 auto;
+            gap: 2.7rem;
+            align-items:center;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+        }
+
+        .nav-links a:hover {
+            background: rgb(202, 14, 14);
+            transform: translateY(-2px);
+        }
+         .logo {
+        text-decoration: none;
+        display: flex;
+        align-items:left;
+        gap: 10px;
+        
+        }
+        .logo-img {
+        margin-left: 110px;
+        
+        height: 60px; 
+        width: 110px;;
+        transition: transform 0.3s ease;
+        }
+
+       
+        .logo-img:hover {
+         transform: scale(1.08);
+         }
+        .vegetable-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            padding: 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .contact-section {
+            padding: 4rem 1rem;
+            /* background: #f8fff8; */
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-form {
+            background:whitesmoke;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .contact-info {
+            padding: 2rem;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .contact-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .contact-details {
+            list-style: none;
+        }
+
+        .contact-details li {
+            margin: 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .farm-map iframe {
+            width: 100%;
+            height: 300px;
+            border: 0;
+            border-radius: 15px;
+            margin-top: 2rem;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #060505;
+            color: white;
+            margin-top: 2rem;
+        }
+        @media (max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+     <header>
+            <nav>
+                <a href="HomePage.html" class="logo">
+                    <img src="./img/FARMLOGO.png" alt="Wankhede Farms" class="logo-img">
+                <div class="nav-links">
+                    <a href="Home.html">Home</a>
+                    <a href="location.html">location</a>
+                    <a href="About.html">About</a>
+                    <a href="Contact.html">Contact</a>
+                    <a href="#cart"><i class="fas fa-shopping-cart"></i></a>
+                    <a href="#login" class="btn btn-primary">Login</a>
+                </div>
+            </nav>
+        </header>
+
+    <section class="contact-section">
+        <div class="contact-container">
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <h2>Connect Directly with Our Farmers</h2>
+                <form id="farmerContactForm"  >
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" class="form-control" id="name" required >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select class="form-control" id="subject" required>
+                            <option value="">Select Inquiry Type</option>
+                            <option>General Inquiry</option>
+                            <option>Wholesale Purchase</option>
+                            <option>Farm Visit Request</option>
+                            <option>Supply Partnership</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea class="form-control" id="message" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <div class="contact-card">
+                    <h3>📞 Direct Contact</h3>
+                    <ul class="contact-details">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            +91 98765 43210
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            farmers@greenharvest.com
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            Wankhede Farms,Koradi,Nagpur, Maharashtra
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="contact-card">
+                    <h3>👩🌾 Farmer Availability</h3>
+                    <ul class="contact-details">
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            Mon-Sat: 8 AM - 6 PM
+                        </li>
+                        <li>
+                            <i class="fas fa-calendar-alt"></i>
+                            Closed on Sundays & Public Holidays
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="farm-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!4v1747092455606!6m8!1m7!1sxPOf_zMJ7cv9ltx-ic647w!2m2!1d21.29551894508696!2d79.059018384151!3f171.92521595001267!4f-6.614377903899111!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                           
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>Organic farming sustains ecosystems by eliminating synthetic chemicals, protecting soil/water health, and promoting biodiversity. It produces nutrient-rich food while reducing pollution and pesticide exposure, safeguarding farmer/consumer health. By enhancing natural cycles and carbon sequestration, it combats climate change. Sustainable and ethical, organic methods preserve resources for future generations.</p>
+ <br>
+ <br>
+ <br>
+ <br>
+ 
+         <p>© 1976 Fresh Organic Vegetables. All rights reserved.</p>
+     </footer> 
+
+    <script>
+       
+        document.getElementById('farmerContactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            
+            alert('Thank you! Your message has been sent to our farming team.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
